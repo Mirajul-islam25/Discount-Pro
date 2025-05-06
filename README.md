@@ -1,11 +1,11 @@
-# EarthQuest - Eco-Adventure 
+# Discount PRO : A Coupon Collecting Application 
 
-![EarthQuest Banner](https://i.ibb.co.com/YBP8s80Z/Eq.png)
+![Discount PRO]()
 
 EarthQuest is an eco-adventure blog website designed to showcase eco-friendly travel experiences like mountain treks, ocean dives, and wildlife safaris. It provides users with detailed adventure insights, authentication, and expert consultation features.
 
 ## 🔗 Live Website
-[Visit EarthQuest](https://earthquest-c2846.web.app/)
+[Visit Discount PRO]()
 ## 🚀 Features
 - 🌿 **Explore Adventures**: View eco-friendly travel experiences with essential details.
 - 📜 **Adventure Details**: See a dedicated page for each adventure with in-depth information.
@@ -37,8 +37,8 @@ VITE_FIREBASE_APP_ID=your_firebase_app_id
 ## ⚡ Getting Started
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/yourusername/Eco-Adventure.git
-cd Eco-Adventure
+git clone 
+cd Discount Pro
 ```
 
 ### 2️⃣ Install Dependencies
@@ -91,7 +91,7 @@ firebase deploy
 This project is open-source and available under the [MIT License](LICENSE).
 
 ---
-📧 Need help? Contact **[mahin1575@gmail.com](mailto:mahin1575@gmail.com)** or create an issue on GitHub.
+📧 Need help? Contact **[]()** or create an issue on GitHub.
 
 Happy Coding! 🌍🚀
 
