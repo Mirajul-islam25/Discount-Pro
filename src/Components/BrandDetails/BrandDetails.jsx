@@ -7,6 +7,9 @@ import "aos/dist/aos.css";
 import couponsData from "../../../public/coupons.json";
 import "./BrandDetails.css"; // separate CSS
 import { toast } from "sonner"; // direct sonner toast
+import { AuthContext } from '../../provider/AuthProvider';
+import { useContext } from "react";
+import { useLocation } from "react-router-dom";
 
 // Simple fallback wrappers (remove if you have real UI library)
 const Badge = ({ children, variant = "default", className = "" }) => {
@@ -50,8 +53,14 @@ const BrandDetails = ({ user }) => {
     });
   }, []);
 
-  if (!user) {
-    return <Navigate to="/brands" replace />;
+   if (!user) {
+    return (
+      <Navigate
+        to="/login"
+        replace
+        state={{ from: location }} 
+      />
+    );
   }
 
   const brand = couponsData.find((b) => b._id === id);

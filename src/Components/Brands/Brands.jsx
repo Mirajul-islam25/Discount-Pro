@@ -7,6 +7,7 @@ import couponsData from "../../../public/coupons.json";
 import "./Brands.css"; // Separate CSS file
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
+import { useNavigate } from "react-router-dom";
 
 // Simple local UI wrappers (if you don't have shadcn/ui)
 const Badge = ({ children, variant = "default", className = "" }) => {
@@ -43,6 +44,7 @@ const Button = ({ children, variant = "solid", size = "md", onClick, className =
 const Brands = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredBrands, setFilteredBrands] = useState(couponsData);
+  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init({
@@ -65,7 +67,7 @@ const Brands = () => {
       alert("Please login to view coupons!");
       return;
     }
-    window.location.href = `/brand/${brandId}`;
+    navigate(`/brand/${brandId}`);
   };
 
 

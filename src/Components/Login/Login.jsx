@@ -116,7 +116,7 @@ const Login = () => {
                     </button>
 
                     <p className="text-center text-sm mt-4">
-                        New to EarthQuest?{" "}
+                        New to DiscountPro?{" "}
                         <Link to="/register" className="text-cyan-600 hover:underline">
                             Register here
                         </Link>

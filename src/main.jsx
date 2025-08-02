@@ -61,8 +61,7 @@ const router = createBrowserRouter(
             element: <Brands></Brands>
         },
         {
-          path:'brand/:id',
-          loader:()=>fetch('/coupons.json'),
+          path: 'brand/:id',
           element:(<PrivateRoutes>
             <BrandDetails></BrandDetails>
           </PrivateRoutes>)
