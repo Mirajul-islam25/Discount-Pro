@@ -78,8 +78,61 @@ npm run dev
 The app will be running at **http://localhost:5174/**.
 
 ## 📂 Project Structure
+```sh
 
-
+├── public
+    ├── coupons.json
+    └── vite.svg
+├── src
+    ├── Components
+    │   ├── AboutDev
+    │   │   └── AboutDev.jsx
+    │   ├── BrandDetails
+    │   │   ├── BrandDetails.css
+    │   │   └── BrandDetails.jsx
+    │   ├── Brands
+    │   │   ├── Brands.css
+    │   │   └── Brands.jsx
+    │   ├── ErrorPage
+    │   │   └── Error.jsx
+    │   ├── Firebase
+    │   │   └── firebase.config.js
+    │   ├── Footer
+    │   │   └── Footer.jsx
+    │   ├── ForgetPassword
+    │   │   └── ForgetPassword.jsx
+    │   ├── Home
+    │   │   └── Home.jsx
+    │   ├── Loading
+    │   │   └── Loading.jsx
+    │   ├── Login
+    │   │   ├── Login.css
+    │   │   └── Login.jsx
+    │   ├── Navbar
+    │   │   └── Navbar.jsx
+    │   ├── Profile
+    │   │   └── Profile.jsx
+    │   ├── Register
+    │   │   ├── Register.css
+    │   │   └── Register.jsx
+    │   ├── Root
+    │   │   ├── Root.css
+    │   │   └── Root.jsx
+    │   ├── UpdateProfile
+    │   │   └── UpdateProfile.jsx
+    │   ├── UsePageTitle
+    │   │   └── UsePageTitle.jsx
+    │   └── routes
+    │   │   └── PrivateRoutes.jsx
+    ├── assets
+    │   └── react.svg
+    ├── index.css
+    ├── main.jsx
+    └── provider
+    │   └── AuthProvider.jsx
+├── tailwind.config.js
+└── vite.config.js
+```
 
 ## 🎯 Deployment
 EarthQuest can be deployed on **Netlify, Firebase Hosting, or Vercel**.
