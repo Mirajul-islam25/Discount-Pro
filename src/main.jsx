@@ -12,9 +12,11 @@ import Profile from './Components/Profile/Profile'
 import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
 import AuthProvider from './provider/AuthProvider'
-import Details from './Components/Details/Details'
 import PrivateRoutes from './Components/routes/PrivateRoutes'
 import ForgetPassword from './Components/ForgetPassword/ForgetPassword'
+import AboutDev from './Components/AboutDev/AboutDev'
+import Brands from './Components/Brands/Brands'
+import BrandDetails from './Components/BrandDetails/BrandDetails'
 
 
 const router = createBrowserRouter(
@@ -37,6 +39,10 @@ const router = createBrowserRouter(
           element: <Profile></Profile>
         },
         {
+          path: 'aboutdev',
+          element: <AboutDev></AboutDev>
+        },
+        {
           path: 'login',
           element: <Login></Login>
         },
@@ -48,14 +54,17 @@ const router = createBrowserRouter(
           
             path: "forget-password",
             element: <ForgetPassword></ForgetPassword>
-          
-          
         },
         {
-          path:'Adventure-Details/:id',
-          loader:()=>fetch('/Data.json'),
+          
+            path: 'brands',
+            element: <Brands></Brands>
+        },
+        {
+          path:'brand/:id',
+          loader:()=>fetch('/coupons.json'),
           element:(<PrivateRoutes>
-            <Details></Details>
+            <BrandDetails></BrandDetails>
           </PrivateRoutes>)
         },
 

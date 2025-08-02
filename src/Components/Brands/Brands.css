@@ -1,0 +1,368 @@
+/* Brands.css */
+
+/* base resets if needed */
+.brands-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color: #f0f6fc;
+  background: #0f172a;
+}
+
+/* background layers */
+.background-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -10;
+}
+
+.animated-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #6366f1);
+  background-size: 600% 600%;
+  animation: gradientShift 15s ease infinite;
+  filter: contrast(1.1);
+}
+
+/* floating blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  animation: float 12s ease-in-out infinite;
+}
+.blob-1 {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 184, 108, 0.35);
+  top: -80px;
+  left: -60px;
+}
+.blob-2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(129, 140, 248, 0.3);
+  bottom: -100px;
+  right: -80px;
+  animation-delay: 3s;
+}
+.blob-3 {
+  width: 250px;
+  height: 250px;
+  background: rgba(16, 185, 129, 0.3);
+  top: 150px;
+  right: -50px;
+  animation-delay: 6s;
+}
+.blob-4 {
+  width: 350px;
+  height: 350px;
+  background: rgba(234, 179, 8, 0.25);
+  bottom: 120px;
+  left: -100px;
+  animation-delay: 9s;
+}
+
+/* keyframes */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+/* content container */
+.content-container {
+  position: relative;
+  z-index: 10;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* header */
+.page-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.subtitle {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255,255,255,0.9);
+}
+.search-wrapper {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,0.7);
+}
+.input,
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1rem;
+  padding-left: 2.5rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.9);
+  color: #1f2d45;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15);
+}
+
+/* results count */
+.result-count {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.count-text {
+  color: rgba(255,255,255,0.9);
+}
+.highlight {
+  color: #facc15;
+  font-weight: 600;
+}
+
+/* card and badges */
+.card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease, border .3s ease;
+  border: 2px solid transparent;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 35px 60px -15px rgba(0,0,0,0.2);
+}
+.brand-card {
+  position: relative;
+}
+.card-content {
+  padding: 1.5rem;
+}
+.brand-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .brand-info {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+.brand-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  box-shadow: 0 10px 30px -5px rgba(0,0,0,0.1);
+}
+.name-and-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.brand-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1f2d45;
+}
+.tags-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.star-icon {
+  width: 16px;
+  height: 16px;
+}
+.description-section {
+  flex: 1;
+  min-width: 0;
+}
+.brand-description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4f5d7a;
+}
+.meta-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+.coupons-available, .category-label {
+  font-size: 0.85rem;
+}
+.bold {
+  font-weight: 600;
+}
+.action-section {
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+.coupon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* badge variants */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+.badge-default {
+  background: #e2e8f0;
+  color: #1f2d45;
+}
+.badge-outline {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+}
+.badge-destructive {
+  background: #ef4444;
+  color: #fff;
+}
+.pulse {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+/* no results */
+.no-results {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #fff;
+}
+.emoji {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.no-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.no-text {
+  margin-bottom: 1rem;
+}
+
+/* CTA box */
+.cta-box {
+  margin-top: 4rem;
+  background: rgba(255,255,255,0.08);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.cta-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.cta-text {
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 1rem;
+}
+
+/* button variants */
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 9999px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all .2s ease;
+}
+.btn-solid {
+  background: #2563eb;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+}
+.btn-solid:hover {
+  filter: brightness(1.05);
+}
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+}
+.btn-secondary {
+  background: #facc15;
+  color: #1f2d45;
+  padding: 0.75rem 1.5rem;
+}
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+.btn-coupon {
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+}

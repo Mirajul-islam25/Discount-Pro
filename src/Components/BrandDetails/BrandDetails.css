@@ -1,0 +1,346 @@
+/* BrandDetails.css */
+
+.brand-details-page {
+  position: relative;
+  min-height: 100vh;
+  background: #0f172a;
+  color: #f0f6fc;
+  padding: 2rem 1rem;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  overflow: hidden;
+}
+.bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+}
+.gradient-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1f2d45, #3b82f6, #8b5cf6);
+  background-size: 600% 600%;
+  animation: gradientShift 20s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* floating blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  mix-blend-mode: overlay;
+  opacity: 0.4;
+  animation: float 14s ease-in-out infinite;
+}
+.blob-1 {
+  width: 320px;
+  height: 320px;
+  background: rgba(245, 158, 11, 0.4);
+  top: -80px;
+  left: -60px;
+}
+.blob-2 {
+  width: 420px;
+  height: 420px;
+  background: rgba(125, 211, 252, 0.35);
+  bottom: -100px;
+  right: -100px;
+  animation-delay: 4s;
+}
+.blob-3 {
+  width: 260px;
+  height: 260px;
+  background: rgba(234, 179, 8, 0.35);
+  top: 180px;
+  right: -40px;
+  animation-delay: 8s;
+}
+.blob-4 {
+  width: 360px;
+  height: 360px;
+  background: rgba(192, 132, 252, 0.3);
+  bottom: 140px;
+  left: -120px;
+  animation-delay: 12s;
+}
+@keyframes float {
+  0%,100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-18px) scale(1.03); }
+}
+
+/* content wrapper */
+.content-wrapper {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+/* Header */
+.brand-header {
+  margin-bottom: 2.5rem;
+}
+.brand-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .brand-top {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+.brand-logo {
+  width: 96px;
+  height: 96px;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4);
+}
+.brand-meta {
+  flex: 1;
+}
+.brand-name {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+.brand-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+  flex-wrap: wrap;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.icon-star {
+  width: 20px;
+  height: 20px;
+  color: #fcd34d;
+}
+.brand-desc {
+  margin: 0;
+  color: rgba(255,255,255,0.9);
+}
+
+/* Coupons grid */
+.coupons-section {
+  margin-bottom: 2rem;
+}
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.coupons-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1,1fr);
+}
+@media (min-width: 768px) {
+  .coupons-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media (min-width: 1280px) {
+  .coupons-grid {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+.coupon-card {
+  background: #0f1e44;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid transparent;
+  transition: transform .3s ease, box-shadow .3s ease, border .3s ease;
+}
+.coupon-card.active {
+  border-color: #6366f1;
+}
+.coupon-card.expired {
+  opacity: 0.5;
+  filter: grayscale(0.2);
+}
+.coupon-card:hover:not(.expired) {
+  transform: scale(1.02);
+  box-shadow: 0 30px 60px -10px rgba(99,102,241,0.5);
+}
+.card-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-weight: 700;
+  font-size: 1rem;
+  gap: 0.5rem;
+}
+.card-content {
+  padding: 1rem 1.25rem;
+}
+.coupon-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.coupon-desc {
+  margin-bottom: 0.75rem;
+  color: #d1d9f0;
+}
+.coupon-meta {
+  margin-bottom: 1rem;
+}
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.meta-icon {
+  width: 16px;
+  height: 16px;
+}
+.expired-text {
+  color: #f87171;
+  font-weight: 600;
+}
+.coupon-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.full-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Info card */
+.info-card {
+  margin-top: 3rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.info-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.info-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1,1fr);
+}
+@media (min-width: 768px) {
+  .info-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+.info-block h4 {
+  margin: 0 0 .5rem;
+  font-weight: 600;
+}
+.info-block p {
+  margin: 0;
+}
+
+/* Back wrapper */
+.back-wrapper {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+/* Badge variants */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem .9rem;
+  border-radius: 9999px;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+.badge-default {
+  background: #6366f1;
+  color: #fff;
+}
+.badge-secondary {
+  background: #10b981;
+  color: #fff;
+}
+.badge-outline {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+}
+.badge-destructive {
+  background: #f87171;
+  color: #fff;
+}
+.pulse {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Button variants */
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 9999px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all .2s ease;
+  padding: .75rem 1.25rem;
+}
+.btn-solid {
+  background: #6366f1;
+  color: #fff;
+}
+.btn-solid:hover {
+  filter: brightness(1.05);
+}
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+}
+.btn-copy {
+  background: #f59e0b;
+  color: #1f2d45;
+}
+.btn-success {
+  background: #22c55e;
+  color: #fff;
+}
+.btn-premium {
+  background: linear-gradient(90deg,#f59e0b,#ef4444);
+  color: #fff;
+}
+.btn-lg {
+  font-size: 1rem;
+}

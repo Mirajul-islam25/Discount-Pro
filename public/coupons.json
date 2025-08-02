@@ -1,0 +1,217 @@
+[
+  {
+    "_id": "1",
+    "brand_name": "Daraz",
+    "rating": 4.5,
+    "description": "Bangladesh's leading online marketplace offering everything from electronics to fashion with amazing deals and fast delivery.",
+    "brand_logo": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=200&h=200&fit=crop&crop=center",
+    "shop_link": "https://www.daraz.com.bd",
+    "category": "Marketplace",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "DARAZ50",
+        "description": "Get 50% off on electronics",
+        "expiry_date": "2024-12-31",
+        "condition": "Minimum purchase of ৳2000",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "NEWUSER30",
+        "description": "30% off for new users",
+        "expiry_date": "2024-11-30",
+        "condition": "First order only",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "FASHION20",
+        "description": "20% off on fashion items",
+        "expiry_date": "2024-10-15",
+        "condition": "Valid on clothing and accessories",
+        "coupon_type": "percentage"
+      }
+    ]
+  },
+  {
+    "_id": "2",
+    "brand_name": "Foodpanda",
+    "rating": 4.2,
+    "description": "Food delivery service bringing your favorite restaurants right to your doorstep with quick delivery and great offers.",
+    "brand_logo": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop&crop=center",
+    "shop_link": "https://www.foodpanda.com.bd",
+    "category": "Food Delivery",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "HUNGRY100",
+        "description": "৳100 off on orders above ৳500",
+        "expiry_date": "2024-09-30",
+        "condition": "Valid for all restaurants",
+        "coupon_type": "fixed"
+      },
+      {
+        "coupon_code": "FREEDELIVERY",
+        "description": "Free delivery on any order",
+        "expiry_date": "2024-10-31",
+        "condition": "No minimum order",
+        "coupon_type": "delivery"
+      }
+    ]
+  },
+  {
+    "_id": "3",
+    "brand_name": "Chaldal",
+    "rating": 4.3,
+    "description": "Online grocery delivery service providing fresh groceries, daily essentials, and household items with same-day delivery.",
+    "brand_logo": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=200&h=200&fit=crop&crop=center",
+    "shop_link": "https://chaldal.com",
+    "category": "Grocery",
+    "isSaleOn": false,
+    "coupons": [
+      {
+        "coupon_code": "FRESH15",
+        "description": "15% off on fresh vegetables",
+        "expiry_date": "2024-09-25",
+        "condition": "Minimum ৳300 purchase",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "GROCERY200",
+        "description": "৳200 off on groceries",
+        "expiry_date": "2024-11-15",
+        "condition": "Order above ৳1500",
+        "coupon_type": "fixed"
+      }
+    ]
+  },
+  {
+    "_id": "4",
+    "brand_name": "Pathao",
+    "rating": 4.4,
+    "description": "Multi-service platform offering ride-sharing, food delivery, parcel service, and e-commerce with convenient digital solutions.",
+    "brand_logo": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=200&h=200&fit=crop&crop=center",
+    "shop_link": "https://pathao.com",
+    "category": "Transportation",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "RIDE50",
+        "description": "৳50 off on your next ride",
+        "expiry_date": "2024-10-20",
+        "condition": "Valid for car rides only",
+        "coupon_type": "fixed"
+      },
+      {
+        "coupon_code": "FIRSTRIDE",
+        "description": "Free first ride up to ৳100",
+        "expiry_date": "2024-12-31",
+        "condition": "New users only",
+        "coupon_type": "fixed"
+      }
+    ]
+  },
+  {
+    "_id": "5",
+    "brand_name": "Pickaboo",
+    "rating": 4.1,
+    "description": "Leading electronics and gadgets retailer offering smartphones, laptops, home appliances with authentic products and warranty.",
+    "brand_logo": "https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=200&h=200&fit=crop&crop=center",
+    "shop_link": "https://www.pickaboo.com",
+    "category": "Electronics",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "GADGET25",
+        "description": "25% off on smartphones",
+        "expiry_date": "2024-11-30",
+        "condition": "Valid on selected models",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "LAPTOP10K",
+        "description": "৳10,000 off on laptops",
+        "expiry_date": "2024-10-31",
+        "condition": "Minimum purchase ৳50,000",
+        "coupon_type": "fixed"
+      },
+      {
+        "coupon_code": "ACCESSORIES15",
+        "description": "15% off on mobile accessories",
+        "expiry_date": "2024-09-30",
+        "condition": "Buy 2 or more items",
+        "coupon_type": "percentage"
+      }
+    ]
+  },
+  {
+    "_id": "6",
+    "brand_name": "Rokomari",
+    "rating": 4.6,
+    "description": "Bangladesh's largest online bookstore offering books, stationery, and educational materials with doorstep delivery.",
+    "brand_logo": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop&crop=center",
+    "shop_link": "https://www.rokomari.com",
+    "category": "Books & Stationery",
+    "isSaleOn": false,
+    "coupons": [
+      {
+        "coupon_code": "BOOKWORM20",
+        "description": "20% off on all books",
+        "expiry_date": "2024-12-25",
+        "condition": "No minimum purchase",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "STUDENT10",
+        "description": "৳100 off for students",
+        "expiry_date": "2024-11-30",
+        "condition": "Valid with student ID",
+        "coupon_type": "fixed"
+      }
+    ]
+  },
+  {
+    "_id": "7",
+    "brand_name": "Ajkerdeal",
+    "rating": 4.0,
+    "description": "Comprehensive online shopping platform featuring fashion, electronics, home appliances, and lifestyle products.",
+    "brand_logo": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=200&h=200&fit=crop&crop=center",
+    "shop_link": "https://www.ajkerdeal.com",
+    "category": "E-commerce",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "DEAL30",
+        "description": "30% off on home appliances",
+        "expiry_date": "2024-10-15",
+        "condition": "Weekend only",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "MEGA500",
+        "description": "৳500 off on orders above ৳5000",
+        "expiry_date": "2024-11-20",
+        "condition": "Mega sale special",
+        "coupon_type": "fixed"
+      }
+    ]
+  },
+  {
+    "_id": "8",
+    "brand_name": "PriyoShop",
+    "rating": 4.2,
+    "description": "Neighborhood digital commerce platform connecting local businesses with customers for convenient shopping experience.",
+    "brand_logo": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=200&h=200&fit=crop&crop=center",
+    "shop_link": "https://priyoshop.com",
+    "category": "Local Commerce",
+    "isSaleOn": false,
+    "coupons": [
+      {
+        "coupon_code": "LOCAL15",
+        "description": "15% off on local products",
+        "expiry_date": "2024-10-31",
+        "condition": "Support local businesses",
+        "coupon_type": "percentage"
+      }
+    ]
+  }
+]
